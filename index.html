@@ -1,218 +1,333 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Notis</title>
-    <link rel="stylesheet" href="css/scholarly.css">
-    <script src="js/scholarly.js"></script>
-  </head>
-  <body prefix="schema: http://schema.org">
-    <header>
-      <h1>Notis</h1>
-      <h3>Notarial info smart tool</h3>
-    </header>
-    <div class="main-container">
-      <div class="title">
-        <h2>Notis</h2>
-      </div>
-      <div class="subtitle">
-          <h2>Authors: </h2>
-          <h2>Insuratelu Madalina</h2>
-          <h2>Macariu Camelia</h2>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Notis</title>
+  <link rel="stylesheet" href="css/scholarly.css">
+  <script src="js/scholarly.js"></script>
+</head>
+
+<body prefix="schema: http://schema.org">
+  <header>
+    <h1>Notis</h1>
+    <h3>Notarial info smart tool</h3>
+  </header>
+  <div class="main-container">
+    <div class="title">
+      <h2>Notis</h2>
+    </div>
+    <div class="subtitle">
+      <h2>Authors: </h2>
+      <h2>Insuratelu Madalina</h2>
+      <h2>Macariu Camelia</h2>
+    </div>
     <section id="abstract">
       <h2>Abstract</h2>
       <p>
-          Notis, short for <a style="color: #2196f3; font-weight: 100;">Notarial Info Smart Tool</a>, is an application with the purpose of providing support for locating offices and services for public notary entities. 
-          This Web system will use the official data regarding public notary entities and authorized translators and interpreters which will locate offices according to user preferences, geographical places, fees, restrictions, schedules and so on.
-          This website uses the power of semantic web to model translators and notaries knowlege.
+        Notis, short for <a style="color: #2196f3; font-weight: 100;">Notarial Info Smart Tool</a>, is an application
+        with the purpose of providing support for locating offices and services for public notary entities.
+        This Web system will use the official data regarding public notary entities and authorized translators and
+        interpreters which will locate offices according to user preferences, geographical places, fees, restrictions,
+        schedules and so on.
+        This website uses the power of semantic web to model translators and notaries knowlege.
       </p>
     </section>
     <section id="features">
       <h2>Features</h2>
       <p>
-          Some big features that our website will provide are the following:
-          <ul>
-            <li>Discover where and when to find notarized documents, such as acknowledgments, oaths/affirmations, copy certification, signature witnessing and others legal procedures in one place.</li>
-            <li>Accuracy of finding the right notarial office/translator with the desired filters.</li>
-            <li>Support for foreign citizens.</li>
-            <li>Map representation of the user's preferences.</li>
-            <li>OpenAPI specification for developers.</li>
-          </ul>
+        Some big features that our website will provide are the following:
+        <ul>
+          <li>Discover where and when to find notarized documents, such as acknowledgments, oaths/affirmations, copy
+            certification, signature witnessing and others legal procedures in one place.</li>
+          <li>Accuracy of finding the right notarial office/translator with the desired filters.</li>
+          <li>Support for foreign citizens.</li>
+          <li>Map representation of the user's preferences.</li>
+          <li>OpenAPI specification for developers.</li>
+        </ul>
       </p>
     </section>
     <section id="architecture">
-        <h2>Architecture</h2>
-        <p>The architecture and the main goals of the application will be presented in this section. The architecture has two main components: the Front-End component, which will provide an user-friendly interface for the client
-          and the Back-End component, which will handle the business logic and data storage of the application.
-        </p>
-        <div class="image-container">
-          <image src="./Architecture Diagram.jpg" class="diagram"/>
-          <p>UML Architecture Diagram (figure 1)</p>
-        </div>
-        <p>
-          We considered that the best approach for this system would be the layered architecture pattern. 
-          Each layer of the architecture has a specific role and responsibility within the application. The presentation layer is 
-          responsible for handling all user interface and browser communication logic, whereas business layer is responsible 
-          for executing specific business rules associated with the request. 
-          <br>One of the reasons we choose the layered architecture pattern is
-          the separation of concerns among components feature. The components within a specific layer deal only with logic that pertains to that layer.
-          This type of component classification makes it easy to build effective roles and responsibility models into our architecture, 
-          and also makes it easy to develop, test, govern, and maintain the application using this architecture pattern due to well-defined 
-          component interfaces and limited component scope.
-        </p>
-        <ul>
-          <li><b>Presentation layer</b> - This is the top most level of the application. The presentation layer displays information related 
-            to such services as viewing/searching some filters, map visualization and displaying informations related to offices and translators. It communicates with other layers by which it 
-            puts out the results to the browser/client tier and all other tiers in the network. In simple terms, it is a layer which users 
-            can access directly.</li>
-            <li><b>Business layer</b> - The business layer is pulled out from the presentation tier and, as its own layer, it controls an application’s functionality by performing detailed processing.
-            This layer coordinates the application, processes commands, makes logical decisions and evaluations and it also moves and process the data between the two surrounding layers.</li>
-            <li><b>Persistence layer</b> - Usually, in this layer, the information is stored and retrieved from a database or file system. However,
-            we will use ontologies, which express relationships and enable users to link multiple concepts to other concepts in a variety of ways. 
-            Ontologies enable database interoperability, cross-database search and smooth knowledge management. The processed information is then passed back to business logic and then back to the user.</li>
+      <h2>Architecture</h2>
+      <p>The architecture and the main goals of the application will be presented in this section. The architecture has
+        two main components: the Front-End component, which will provide an user-friendly interface for the client
+        and the Back-End component, which will handle the business logic and data storage of the application.
+      </p>
+      <div class="image-container">
+        <image src="./arhitecture.jpg" class="diagram" />
+        <p>UML Architecture Diagram (figure 1)</p>
+      </div>
+      <p>
+        We considered that the best approach for this system would be the layered architecture pattern.
+        Each layer of the architecture has a specific role and responsibility within the application. The presentation
+        layer is
+        responsible for handling all user interface and browser communication logic, whereas business layer is
+        responsible
+        for executing specific business rules associated with the request.
+        <br>One of the reasons we choose the layered architecture pattern is
+        the separation of concerns among components feature. The components within a specific layer deal only with logic
+        that pertains to that layer.
+        This type of component classification makes it easy to build effective roles and responsibility models into our
+        architecture,
+        and also makes it easy to develop, test, govern, and maintain the application using this architecture pattern
+        due to well-defined
+        component interfaces and limited component scope.
+      </p>
+      <ul>
+        <li><b>Presentation layer</b> - This is the top most level of the application. The presentation layer displays
+          information related
+          to such services as viewing/searching some filters, map visualization and displaying informations related to
+          offices and translators. It communicates with other layers by which it
+          puts out the results to the browser/client tier and all other tiers in the network. In simple terms, it is a
+          layer which users
+          can access directly.</li>
+        <li><b>Business layer</b> - The business layer is pulled out from the presentation tier and, as its own layer,
+          it controls an application’s functionality by performing detailed processing.
+          This layer coordinates the application, processes commands, makes logical decisions and evaluations and it
+          also moves and process the data between the two surrounding layers.</li>
+        <li><b>Persistence layer</b> - Usually, in this layer, the information is stored and retrieved from a database
+          or file system. However,
+          we will use ontologies, which express relationships and enable users to link multiple concepts to other
+          concepts in a variety of ways.
+          Ontologies enable database interoperability, cross-database search and smooth knowledge management. The
+          processed information is then passed back to business logic and then back to the user.</li>
+      </ul>
+      <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Class Diagram</h3>
+      <p>We created a class diagram for the application which describes the structure of the system (with the classes),
+        their attributes and methods, and the relationship among objects.</p>
+      <div class="image-container">
+        <image src="./uml class .jpg" class="diagram" />
+        <p>UML Class Diagram (figure 2)</p>
+      </div>
+      <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Back-End Component</h3>
+      <p>The back-end application will be written in C# using <a style="color: #2196f3; font-weight: 100;">.NET Core
+          3.0</a>.
+        Also, for working with RDF triple stores we will use <a style="color: #2196f3; font-weight: 100;">dotNetRDF</a>.
+        It's a complete library for parsing, managing, querying and writing RDF.
+        <br>We will use <a style="color: #2196f3; font-weight: 100;">ASP.NET Web API</a>, to implement a RESTful Web
+        API. This
+        has great flexibility in terms of separating the service layer from the controllers allowing you to use several
+        of the available Dependency Injection frameworks fairly easy.
+        For the database we'll be using the GraphDB, which is a graph database.
+        The reasons for using these technologies and libraries are:
+      </p>
+      <ul>
+        <li><a style="color: #2196f3; font-weight: 100;">.NET Core 3.0</a>: brings plenty of benefits for desktop-based
+          applications. First, it will improve the overall app performances and bring more speed to runtime updates.
+          Second, it is an open-source platform that offers innovative BCL and APIs without resulting in compatibility
+          issues. Third, there are other significant benefits for .NET application development that include:
+          <ul>
+            <li>Design that allows both, application-local and machine-global deployment of apps.</li>
+            <li>Architected for testability.</li>
+            <li>Integration of modern, client-side frameworks and development workflows.</li>
+            <li>Built-in dependency injection.</li>
           </ul>
-        <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Class Diagram</h3>
-        <p>We created a class diagram for the application which describes the structure of the system (with the classes), their attributes and methods, and the relationship among objects.</p>
-        <div class="image-container">
-            <image src="./UML class diagram.jpg" class="diagram"/>
-            <p>UML Class Diagram (figure 2)</p>
-        </div>
-        <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Back-End Component</h3>
-        <p>The back-end application will be written in C# using <a style="color: #2196f3; font-weight: 100;">.NET Core 3.0</a>. 
-          Also, for working with RDF triple stores we will use <a style="color: #2196f3; font-weight: 100;">dotNetRDF</a>.
-          It's a complete library for parsing, managing, querying and writing RDF. 
-          <br>We will use <a style="color: #2196f3; font-weight: 100;">ASP.NET Web API</a>, to implement a RESTful Web API. This
-          has great flexibility in terms of separating the service layer from the controllers allowing you to use several of the available Dependency Injection frameworks fairly easy. 
-          For the database we'll be using the GraphDB, which is a graph database.
-          The reasons for using these technologies and libraries are:
-        </p>
-        <ul>
-            <li><a style="color: #2196f3; font-weight: 100;">.NET Core 3.0</a>: brings plenty of benefits for desktop-based applications. First, it will improve the overall app performances and bring more speed to runtime updates. Second, it is an open-source platform that offers innovative BCL and APIs without resulting in compatibility issues. Third, there are other significant benefits for .NET application development that include:
-              <ul>
-                  <li>Design that allows both, application-local and machine-global deployment of apps.</li>
-                  <li>Architected for testability.</li>
-                  <li>Integration of modern, client-side frameworks and development workflows.</li>
-                  <li>Built-in dependency injection.</li>
-              </ul>
-            </li>
-          <li><a style="color: #2196f3; font-weight: 100;">dotNetRDF</a>: is a powerful and flexible API for working with RDF and SPARQL in .NET environments. Also, it contains the core libraries. This includes support for reading and writing RDF; and for managing and querying RDF data in-memory.</li>
-          <li><a style="color: #2196f3; font-weight: 100;">GraphDB</a>: GraphDB allows you to link diverse data, index it for semantic search and enrich it via text analysis to build big knowledge graphs.
-          Some advantages of using this database are:
-            <ul>
-                <li><a style="color: #2196f3; font-weight: 100;">Object-Oriented Thinking</a> - explicit semantics for each query. There are no hidden assumptions such as relational SQL, where you have to know how the tables in the FROM clause will implictilty form cartesian products.</li>
-                <li><a style="color: #2196f3; font-weight: 100;">Performance</a> - superior performance for querying related data, big or small.</li>
-                <li><a style="color: #2196f3; font-weight: 100;">Update Data in Real-Time and Support Queries Simultaneously</a> - Graph databases can perform real-time updates on big data while supporting queries at the same time, which will be very useful in our API requests.</li>
-            </ul>
         </li>
-        </ul>
-        <p id="references">Also, for the database we will use <a style="color: #2196f3; font-weight: 100;">SPARQL</a> - which is is a RDF query language, a semantic query language for databases, able to retrieve and manipulate data stored in Resource Description Framework (RDF) format.
-          SPARQL allows users to write queries against what can loosely be called "key-value" data or, more specifically, data that follow the RDF specification of the W3C. Thus, the entire database is a set of "subject-predicate-object" triples. This is analogous to some NoSQL databases' usage of the term "document-key-value", such as MongoDB.
-          Thus, SPARQL provides a full set of analytic query operations such as JOIN, SORT, AGGREGATE for data whose schema is intrinsically part of the data rather than requiring a separate schema definition. However, schema information (the ontology) is often provided externally, to allow joining of different datasets unambiguously. In addition, SPARQL provides specific graph traversal syntax for data that can be thought of as a graph.
-          <br>
-          One way to interact with the API is with the Swagger specifications from: <a href="https://app.swaggerhub.com/apis-docs/madalina1/Notis/1.0.0">NotisAPi</a>.
-          Also, for the services data we discovered some legal papers and procedures used in the public notary domain and can be found at <a href="https://docs.google.com/document/d/1CS0r-r_H1AEA3siUP8aumRnNSFXRxehI1GbKno5RpUM/edit">legal papers</a>.
-        </p>
-        <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Front-End Component</h3>
-        <p>
-          For the user experience of the Front-End component, we'll be using Material UI, which has good looking components, the design will be consistent,
-          and considering the development part, we can say that is very easy to use and the documentation is very good.  
-          <br>In the following images, we have some sketches of the application. In the first image, we can see the Welcome page with some filters, that the user needs to fill in order to display the map(image 2), 
-          which is the first view that the user will see when enters the website. After completing the filters, a map will appear, with the marked places returned from the response.
-          On hover, the user will see the schedule of the notary/translator and some other important informations. Clicking on the mark it will open a drawer/popup with some more informations 
-          about the notary, such as: reviews, the prices, entire schedule and so on. Also, the user can leave a review (ratings from one to five) after his experience with that notary/translator. 
-        </p>
-        <div class="image-container">
-            <image src="./figure1.jpg" class="diagram" width="100%"/>
-            <p>Image 1</p>
-        </div>
-        <div class="image-container">
-            <image src="./figure2.jpg" class="diagram" width="100%"/>
-            <p>Image 2</p>
-        </div>
-        <p>The technologies that we'll use for the Front-End component are:</p>
-        <ul>
-          <li><a style="color: #2196f3; font-weight: 100;">React</a>: used for building the user interface, as it's optimal for fetching 
-            rapidly changing data that needs to be recorded. Some benefits of using React in our application are:
-            <ul>
-              <li>It facilitates the overall process of writing components</li>
-              <li>It boosts productivity and facilitates further maintenance</li>
-              <li>It ensures faster rendering</li>
-              <li>It guarantees stable code</li>
-              <li>It is SEO friendly</li>
-            </ul>
-            In conclusion, React has definitely caught our attention, especially because we want to create a single page application and we want to make it fast, responsive and user-friendly. Also,
-            it provides developers with the capability of working with a virtual browser (DOM) that is much faster and user-friendly, than the real one. 
-          </li>
-          <li><a style="color: #2196f3; font-weight: 100;">Redux</a> used for managing the application state. Here are some several benefits of using it: 
-            <ul>
-              <li>Predictable state updates make it easier to understand how the data flow works in the application</li>
-              <li>The use of "pure" reducer functions makes logic easier to test, and enables useful features like "time-travel debugging".</li>
-              <li>Centralizing the state makes it easier to implement things like logging changes to the data, or persisting data between page refreshes</li>
-            </ul>
-          </li>
-        </ul>
-		<div class="image-container">
-            <image src="./redux.jpg" class="diagram" width="50%"/>
-            <p>React and Redux Architecture</p>
-        </div>
-        Also, we'll be using <a style="color: #2196f3; font-weight: 100;">TypeScript</a> over these frameworks, because it has the potential to bring type safety for reducers, state, action creators, and UI components, 
-          as well as easy refactoring of typed code. So, Typescript is in its strongest position for making our application more stable, readable and manageable.
-        <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Data access layer</h3>
-        <p>
-          RDF consists of triples. These triples are based on an Entity Attribute Value (EAV) model, in which the subject is the entity, the predicate is the attribute, and the object is the value. Each triple has a unique identifier known as the Uniform Resource Identifier, or URI. URI’s look like web page addresses. The parts of a triple, the subject, predicate, and object, represent links in a graph.
-          Multiple triples link together to form an RDF model. The graph below describes the realtion between the client and the service via RDF schema. We can easily identify triples such as "Translator worksIn Translations", and we also found out that the Address has Longitude. 
-        </p>
-        <div class="image-container">
-            <image src="./RDF diagram.jpg" class="diagram" width="100%"/>
-            <p>RDF Diagram (figure 3)</p>
-        </div>
-        <p></p>
-        <div class="image-container">
-            <image src="./Rdf1.png" class="diagram" width="80%"/>
-            <p>Service (figure 4)</p>
-        </div>
-        <div class="image-container">
-            <image src="./Rdf2.png" class="diagram" width="80%"/>
-            <p>Type of service (figure 5)</p>
-        </div>
-        <div class="image-container">
-            <image src="./Rdf3.png" class="diagram" width="80%"/>
-            <p>Address (figure 6)</p>
-        </div>
+        <li><a style="color: #2196f3; font-weight: 100;">dotNetRDF</a>: is a powerful and flexible API for working with
+          RDF and SPARQL in .NET environments. Also, it contains the core libraries. This includes support for reading
+          and writing RDF; and for managing and querying RDF data in-memory.</li>
+        <li><a style="color: #2196f3; font-weight: 100;">GraphDB</a>: GraphDB allows you to link diverse data, index it
+          for semantic search and enrich it via text analysis to build big knowledge graphs.
+          Some advantages of using this database are:
+          <ul>
+            <li><a style="color: #2196f3; font-weight: 100;">Object-Oriented Thinking</a> - explicit semantics for each
+              query. There are no hidden assumptions such as relational SQL, where you have to know how the tables in
+              the FROM clause will implictilty form cartesian products.</li>
+            <li><a style="color: #2196f3; font-weight: 100;">Performance</a> - superior performance for querying related
+              data, big or small.</li>
+            <li><a style="color: #2196f3; font-weight: 100;">Update Data in Real-Time and Support Queries
+                Simultaneously</a> - Graph databases can perform real-time updates on big data while supporting queries
+              at the same time, which will be very useful in our API requests.</li>
+          </ul>
+        </li>
+      </ul>
+      <p id="references">Also, for the database we will use <a style="color: #2196f3; font-weight: 100;">SPARQL</a> -
+        which is is a RDF query language, a semantic query language for databases, able to retrieve and manipulate data
+        stored in Resource Description Framework (RDF) format.
+        SPARQL allows users to write queries against what can loosely be called "key-value" data or, more specifically,
+        data that follow the RDF specification of the W3C. Thus, the entire database is a set of
+        "subject-predicate-object" triples. This is analogous to some NoSQL databases' usage of the term
+        "document-key-value", such as MongoDB.
+        Thus, SPARQL provides a full set of analytic query operations such as JOIN, SORT, AGGREGATE for data whose
+        schema is intrinsically part of the data rather than requiring a separate schema definition. However, schema
+        information (the ontology) is often provided externally, to allow joining of different datasets unambiguously.
+        In addition, SPARQL provides specific graph traversal syntax for data that can be thought of as a graph.
+        <br>
+        One way to interact with the API is with the Swagger specifications from: <a
+          href="https://app.swaggerhub.com/apis-docs/madalina1/Notis/1.0.0">NotisAPi</a>.
+        Also, for the services data we discovered some legal papers and procedures used in the public notary domain and
+        can be found at <a
+          href="https://docs.google.com/document/d/1CS0r-r_H1AEA3siUP8aumRnNSFXRxehI1GbKno5RpUM/edit">legal papers</a>.
+      </p>
+      <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Front-End Component</h3>
+      <p>
+        For the user experience of the Front-End component, we'll be using Material UI, which has good looking
+        components, the design will be consistent,
+        and considering the development part, we can say that is very easy to use and the documentation is very good.
+        <br>In the following images, we have some sketches of the application. In the first image, we can see the
+        Welcome page with some filters, that the user needs to fill in order to display the map(image 2),
+        which is the first view that the user will see when enters the website. After completing the filters, a map will
+        appear, with the marked places returned from the response.
+        On hover, the user will see the schedule of the notary/translator and some other important informations.
+        Clicking on the mark it will open a drawer/popup with some more informations
+        about the notary, such as: reviews, the prices, entire schedule and so on. Also, the user can leave a review
+        (ratings from one to five) after his experience with that notary/translator.
+      </p>
+      <div class="image-container">
+        <image src="./figure1.jpg" class="diagram" width="100%" />
+        <p>Image 1</p>
+      </div>
+      <div class="image-container">
+        <image src="./figure2.jpg" class="diagram" width="100%" />
+        <p>Image 2</p>
+      </div>
+      <p>The technologies that we'll use for the Front-End component are:</p>
+      <ul>
+        <li><a style="color: #2196f3; font-weight: 100;">React</a>: used for building the user interface, as it's
+          optimal for fetching
+          rapidly changing data that needs to be recorded. Some benefits of using React in our application are:
+          <ul>
+            <li>It facilitates the overall process of writing components</li>
+            <li>It boosts productivity and facilitates further maintenance</li>
+            <li>It ensures faster rendering</li>
+            <li>It guarantees stable code</li>
+            <li>It is SEO friendly</li>
+          </ul>
+          In conclusion, React has definitely caught our attention, especially because we want to create a single page
+          application and we want to make it fast, responsive and user-friendly. Also,
+          it provides developers with the capability of working with a virtual browser (DOM) that is much faster and
+          user-friendly, than the real one.
+        </li>
+        <li><a style="color: #2196f3; font-weight: 100;">Redux</a> used for managing the application state. Here are
+          some several benefits of using it:
+          <ul>
+            <li>Predictable state updates make it easier to understand how the data flow works in the application</li>
+            <li>The use of "pure" reducer functions makes logic easier to test, and enables useful features like
+              "time-travel debugging".</li>
+            <li>Centralizing the state makes it easier to implement things like logging changes to the data, or
+              persisting data between page refreshes</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="image-container">
+        <image src="./redux.jpg" class="diagram" width="50%" />
+        <p>React and Redux Architecture</p>
+      </div>
+      Also, we'll be using <a style="color: #2196f3; font-weight: 100;">TypeScript</a> over these frameworks, because it
+      has the potential to bring type safety for reducers, state, action creators, and UI components,
+      as well as easy refactoring of typed code. So, Typescript is in its strongest position for making our application
+      more stable, readable and manageable.
+      <h3 style="text-align: center; font-weight: 600; color: #727272; margin-top: 30px;">Data access layer</h3>
+      <p>
+        RDF consists of triples. These triples are based on an Entity Attribute Value (EAV) model, in which the subject
+        is the entity, the predicate is the attribute, and the object is the value. Each triple has a unique identifier
+        known as the Uniform Resource Identifier, or URI. URI’s look like web page addresses. The parts of a triple, the
+        subject, predicate, and object, represent links in a graph.
+        Multiple triples link together to form an RDF model. The graph below describes the realtion between the client
+        and the service via RDF schema. We can easily identify triples such as "Translator worksIn Translations", and we
+        also found out that the Address has Longitude.
+      </p>
+      <div class="image-container">
+        <image src="./RDF diagram.jpg" class="diagram" width="100%" />
+        <p>RDF Diagram (figure 3)</p>
+      </div>
+      <p></p>
+      <div class="image-container">
+        <image src="./Rdf1.png" class="diagram" width="80%" />
+        <p>Service (figure 4)</p>
+      </div>
+      <div class="image-container">
+        <image src="./Rdf2.png" class="diagram" width="80%" />
+        <p>Type of service (figure 5)</p>
+      </div>
+      <div class="image-container">
+        <image src="./Rdf3.png" class="diagram" width="80%" />
+        <p>Address (figure 6)</p>
+      </div>
     </section>
     <section id="useCase">
-        <h2>Use case</h2>
-        <p>The figure below shows a use case diagram for our web system, with some possible interactions between the Actor(user) and the system.</p>
+      <h2>Use case</h2>
+      <p>The figure below shows a use case diagram for our web system, with some possible interactions between the
+        Actor(user) and the system.</p>
+      <div class="image-container">
+        <image src="./Use case diagram.jpg" class="diagram" width="100%" />
+        <p>Use case Diagram (figure 7)</p>
+      </div>
+    </section>
+    <section id="activity">
+      <h2>Activity Diagram</h2>
+      <p>The activity diagram describes the dynamic aspects of the system, representing the flow from one activity to
+        another.</p>
+      <div class="image-container">
+        <image src="./Activity diagram.jpg" class="diagram" width="100%" />
+        <p>Activity Diagram (figure 8)</p>
+      </div>
+    </section>
+    <section id="progress">
+      <h2>Project progress</h2>
+      <p>Based on our initial goal, we implemented almost all the functionalities. The project still has its main
+        purpose to display all the offices for the type of service wanted and also based on some filters(ex: price,
+        schedule, city).</p>
+      <h3 style="font-weight: 600; color: #727272; margin-top: 30px;">The hierarcy of classes:</h3>
+      <p>As a final implemented APIs we have endpoints to get all the notaries, to get all the translators, to get
+        services per office and to make a request based on some filters.
+      </p>
+      <h3 style="font-weight: 600; color: #727272; margin-top: 30px;">The ontology</h3>
+      <p>The ontology consist of the following classes: <b>notis:service</b>, which can be <b>notis:notary</b> or <b>notis:translation</b>,
+        <b>notis:notary-type-of-service</b>, <b>notis:translation-type-of-service</b>, <b>notis:necessary-papers</b>.
+        To create the ontology, we used Protege to create classes and some individuals.
+        Based on xml files with some details about the notaries and translators, we created a python script to
+        convert data to RDF type which we added at the ontology.
         <div class="image-container">
-            <image src="./Use case diagram.jpg" class="diagram" width="100%"/>
-            <p>Use case Diagram (figure 7)</p>
+          <image src="./image1.png" class="diagram" width="100%" />
+          <p>GraphDb</p>
         </div>
-      </section>
-      <section id="activity">
-          <h2>Activity Diagram</h2>
-          <p>The activity diagram describes the dynamic aspects of the system, representing the flow from one activity to another.</p>
-          <div class="image-container">
-              <image src="./Activity diagram.jpg" class="diagram" width="100%"/>
-              <p>Activity Diagram (figure 8)</p>
-          </div>
-        </section>
+        <div class="image-container">
+          <image src="./image2.png" class="diagram" width="100%" />
+          <p>GraphDb</p>
+        </div>
+        We used sparql to interogate the graph.
+        <div class="image-container">
+          <image src="./image3.png" class="diagram" width="100%" />
+          <p>SPARQL Query</p>
+        </div>
+
+        We used Place schema.org concept to display city, latitude and longitude. On frontend we used them to create
+        markers on a GoogleMap. When you click on one of them, more details are shown.
+        <div class="image-container">
+          <image src="./image4.png" class="diagram" width="100%" />
+          <p>Protege</p>
+        </div>
+        <div class="image-container">
+          <image src="./image5.png" class="diagram" width="100%" />
+          <p>Protege</p>
+        </div>
+      </p>
+
+    </section>
     <section id="conclusions">
-        <h2>Conclusions</h2>
-        <p>This web system can be a valuable tool for anyone who is in search of notary offices and services, based on the user's preferences, geographical places and the others mentioned above. It also provides an interactive user interface, with material UI components and simple steps to configure the needed offices or translators.
-          <br>To conclude the technical paper, Notis takes advantage of modern technologies mentioned above ( i.e : OWL ) in order to create a smart web application.</p>
+      <h2>Conclusions</h2>
+      <p>This web system can be a valuable tool for anyone who is in search of notary offices and services, based on the
+        user's preferences, geographical places and the others mentioned above. It also provides an interactive user
+        interface, with material UI components and simple steps to configure the needed offices or translators.
+        <br>To conclude the technical paper, Notis takes advantage of modern technologies mentioned above ( i.e : OWL )
+        in order to create a smart web application.</p>
     </section>
     <section id="references">
-        <h2>References</h2>
-        <ul>
-            <li><a href="https://dotnet.microsoft.com/download/dotnet-core/3.0">.NET Core 3.0</a> - free and open-source software framework developed by Microsoft.</li>
-            <li><a href="https://reactjs.org/">React</a> - open-source JavaScript library for building user interfaces developed by Facebook.</li>
-            <li><a href="https://redux.js.org/basics/usage-with-react">Redux</a> - open-source JavaScript library for managing application state.</li>
-            <li><a href="http://graphdb.ontotext.com/">GraphDB</a> - semantic graph database.</li>
-            <li><a href="https://www.dotnetrdf.org/">dotNetRDF</a> - an open source .NET Library for RDF.</li>
-        </ul>
+      <h2>References</h2>
+      <ul>
+        <li><a href="https://dotnet.microsoft.com/download/dotnet-core/3.0">.NET Core 3.0</a> - free and open-source
+          software framework developed by Microsoft.</li>
+        <li><a href="https://reactjs.org/">React</a> - open-source JavaScript library for building user interfaces
+          developed by Facebook.</li>
+        <li><a href="https://redux.js.org/basics/usage-with-react">Redux</a> - open-source JavaScript library for
+          managing application state.</li>
+        <li><a href="http://graphdb.ontotext.com/">GraphDB</a> - semantic graph database.</li>
+        <li><a href="https://www.dotnetrdf.org/">dotNetRDF</a> - an open source .NET Library for RDF.</li>
+      </ul>
     </section>
   </div>
-  </body>
+</body>
+
 </html>
